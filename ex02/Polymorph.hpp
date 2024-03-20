@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Polymorph.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:54:46 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 16:56:49 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:43:50 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Polymorph : public ASpell{
 		Polymorph(Polymorph const & src);
 		Polymorph&			operator=(Polymorph const & rhs);
 		~Polymorph(void);
-		virtual Polymorph*	clone(void) const;
+		virtual ASpell*	clone(void) const;
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BrickWall.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:57:12 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 16:58:44 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:43:22 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class BrickWall : public ATarget{
 		BrickWall(BrickWall const & src);
 		BrickWall&			operator=(BrickWall const & rhs);
 		~BrickWall(void);
-		virtual BrickWall*	clone(void) const;
+		virtual ATarget*	clone(void) const;
 };
 
 #endif

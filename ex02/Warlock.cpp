@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Warlock.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 11:46:04 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 17:45:31 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 11:01:05 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,12 @@ Warlock::~Warlock(void){
 	return;
 }
 
-std::string	Warlock::getName(void) const{
+const std::string&	Warlock::getName(void) const{
 
 	return (this->_name);
 }
 
-std::string	Warlock::getTitle(void) const{
+const std::string&	Warlock::getTitle(void) const{
 
 	return (this->_title);
 }
@@ -69,13 +69,12 @@ void	Warlock::introduce(void) const{
 
 void	Warlock::learnSpell(ASpell* spell){
 
-	if (spell)
-		this->_spell_book.learnSpell(spell);
+	this->_spell_book.learnSpell(spell);
 }
 
 void	Warlock::forgetSpell(const std::string spell_name){
-	
-	this->_spell_book.forgetSpell(spell_name);	
+
+	this->_spell_book.forgetSpell(spell_name);
 }
 
 void	Warlock::launchSpell(const std::string spell_name, ATarget& target){

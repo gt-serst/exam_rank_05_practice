@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Warlock.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 11:46:04 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 16:50:47 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 12:00:59 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,18 @@ Warlock &	Warlock::operator=(Warlock const & rhs){
 Warlock::~Warlock(void){
 
 	std::cout << getName() << ": My job here is done!" << std::endl;
+	for (std::map<std::string, ASpell*>::iterator it = this->_spell_book.begin(); it != this->_spell_book.end(); ++it)
+		delete it->second;
+	this->_spell_book.clear();
 	return;
 }
 
-std::string	Warlock::getName(void) const{
+const std::string&	Warlock::getName(void) const{
 
 	return (this->_name);
 }
 
-std::string	Warlock::getTitle(void) const{
+const std::string&	Warlock::getTitle(void) const{
 
 	return (this->_title);
 }
@@ -75,10 +78,14 @@ void	Warlock::learnSpell(ASpell* spell){
 }
 
 void	Warlock::forgetSpell(const std::string spell_name){
-	
-	if (this->_spell_book.find(spell_name) != this->_spell_book.end())
-		this->_spell_book.erase(this->_spell_book.find(spell_name));
-	
+
+	std::map<std::string, ASpell*>::iterator it = this->_spell_book.find(spell_name);
+
+	if (it != this->_spell_book.end())
+	{
+		delete it->second;
+		this->_spell_book.erase(it);
+	}
 }
 
 void	Warlock::launchSpell(const std::string spell_name, ATarget& target){

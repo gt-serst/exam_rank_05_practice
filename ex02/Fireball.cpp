@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fireball.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:52:54 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 16:54:24 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:43:34 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Fireball::~Fireball(void){
 	return;
 }
 
-Fireball*	Fireball::clone(void) const{
+ASpell*	Fireball::clone(void) const{
 
 	return (new Fireball());
 }

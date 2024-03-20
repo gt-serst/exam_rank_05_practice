@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Warlock.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 11:44:07 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 17:41:09 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 11:01:56 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ class Warlock{
 	public:
 		Warlock(std::string name, std::string title);
 		~Warlock(void);
-		std::string	getName(void) const;
-		std::string	getTitle(void) const;
-		void		setTitle(const std::string& title);
-		void		introduce() const;
-		void		learnSpell(ASpell* spell);
-		void		forgetSpell(const std::string spell_name);
-		void		launchSpell(const std::string spell_name, ATarget& target);
+		const std::string&	getName(void) const;
+		const std::string&	getTitle(void) const;
+		void				setTitle(const std::string& title);
+		void				introduce() const;
+		void				learnSpell(ASpell* spell);
+		void				forgetSpell(const std::string spell_name);
+		void				launchSpell(const std::string spell_name, ATarget& target);
 
 	private:
 		Warlock(void);

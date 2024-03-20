@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dummy.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 15:23:13 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 16:03:45 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:43:27 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Dummy::~Dummy(void){
 	return;
 }
 
-Dummy*	Dummy::clone(void) const{
+ATarget*	Dummy::clone(void) const{
 
 	return (new Dummy());
 }

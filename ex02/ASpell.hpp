@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ASpell.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 12:21:47 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 17:45:34 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 12:04:13 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ class ASpell{
 		ASpell(void);
 		ASpell(std::string name, std::string effects);
 		ASpell(ASpell const & src);
-		ASpell&			operator=(ASpell const & rhs);
-		~ASpell(void);
-		std::string		getName(void) const;
-		std::string		getEffects(void) const;
-		virtual ASpell*	clone(void) const = 0;
-		void			launch(ATarget const & obj) const;
-	
+		ASpell&					operator=(ASpell const & rhs);
+		virtual ~ASpell(void);
+		const std::string&		getName(void) const;
+		const std::string&		getEffects(void) const;
+		virtual ASpell*			clone(void) const = 0;
+		void					launch(ATarget const & obj) const;
+
 	protected:
 		std::string	name;
-		std::string effects;
+		std::string	effects;
 };
 
 #endif

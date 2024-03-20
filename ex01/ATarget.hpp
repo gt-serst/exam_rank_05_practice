@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ATarget.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 13:59:34 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 16:05:50 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 12:04:08 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ATarget{
 		ATarget(std::string type);
 		ATarget(ATarget const & src);
 		ATarget&			operator=(ATarget const & rhs);
-		~ATarget(void);
+		virtual ~ATarget(void);
 		const std::string&	getType(void) const;
 		virtual ATarget*	clone(void) const = 0;
 		void				getHitBySpell(ASpell const & obj) const;

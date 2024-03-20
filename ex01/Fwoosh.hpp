@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fwoosh.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 14:12:54 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 15:53:09 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:43:14 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Fwoosh : public ASpell{
 		Fwoosh(Fwoosh const & src);
 		Fwoosh&			operator=(Fwoosh const & rhs);
 		~Fwoosh(void);
-		virtual Fwoosh*	clone(void) const;
+		virtual ASpell*	clone(void) const;
 };
 
 #endif

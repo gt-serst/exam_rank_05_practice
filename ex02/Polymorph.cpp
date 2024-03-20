@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Polymorph.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:55:12 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 16:56:51 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:43:53 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Polymorph::~Polymorph(void){
 	return;
 }
 
-Polymorph*	Polymorph::clone(void) const{
+ASpell*	Polymorph::clone(void) const{
 
 	return (new Polymorph());
 }

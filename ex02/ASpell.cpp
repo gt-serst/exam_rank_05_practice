@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ASpell.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 13:51:20 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 17:40:23 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:40:42 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ ASpell::ASpell(void){
 
 ASpell::ASpell(std::string name, std::string effects) : name(name), effects(effects){
 
-	return;		
+	return;
 }
 
 ASpell::ASpell(ASpell const & src){
@@ -44,12 +44,12 @@ ASpell::~ASpell(void){
 	return;
 }
 
-std::string	ASpell::getName(void) const{
+const std::string&	ASpell::getName(void) const{
 
 	return (this->name);
 }
 
-std::string	ASpell::getEffects(void) const{
+const std::string&	ASpell::getEffects(void) const{
 
 	return (this->effects);
 }

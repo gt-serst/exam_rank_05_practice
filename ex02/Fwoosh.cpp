@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fwoosh.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 14:15:47 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 15:56:54 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:43:42 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Fwoosh::~Fwoosh(void){
 	return;
 }
 
-Fwoosh*	Fwoosh::clone(void) const{
+ASpell*	Fwoosh::clone(void) const{
 
 	return (new Fwoosh());
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Warlock.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 11:46:04 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 13:54:07 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 10:30:34 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,12 @@ Warlock::~Warlock(void){
 	return;
 }
 
-std::string	Warlock::getName(void) const{
+const std::string&	Warlock::getName(void) const{
 
 	return (this->_name);
 }
 
-std::string	Warlock::getTitle(void) const{
+const std::string&	Warlock::getTitle(void) const{
 
 	return (this->_title);
 }
