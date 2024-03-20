@@ -6,7 +6,7 @@
 /*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 17:17:15 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/20 12:05:17 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/20 14:49:13 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ TargetGenerator::TargetGenerator(TargetGenerator const & src){
 TargetGenerator &	TargetGenerator::operator=(TargetGenerator const & rhs){
 
 	if (this != &rhs)
-	{
-	}
+		this->_target = rhs._target;
 	return (*this);
 }
 
