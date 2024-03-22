@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   TargetGenerator.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gt-serst <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 17:17:06 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/19 17:41:35 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/22 12:36:52 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class TargetGenerator{
 		TargetGenerator(void);
 		~TargetGenerator(void);
 		void		learnTargetType(ATarget* target);
-		void		forgetTargetType(std::string const & type);
-		ATarget*	createTarget(std::string const & type);
-	
+		void		forgetTargetType(const std::string& type);
+		ATarget*	createTarget(const std::string& type);
+
 	private:
 		TargetGenerator(TargetGenerator const & src);
 		TargetGenerator &	operator=(TargetGenerator const & rhs);

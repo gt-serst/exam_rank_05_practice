@@ -6,7 +6,7 @@
 /*   By: gt-serst <gt-serst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 17:17:15 by gt-serst          #+#    #+#             */
-/*   Updated: 2024/03/20 14:49:13 by gt-serst         ###   ########.fr       */
+/*   Updated: 2024/03/22 12:37:08 by gt-serst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	TargetGenerator::learnTargetType(ATarget* target){
 			this->_target[target->getType()] = target->clone();
 }
 
-void	TargetGenerator::forgetTargetType(std::string const & type){
+void	TargetGenerator::forgetTargetType(const std::string& type){
 
 	std::map<std::string, ATarget*>::iterator it = this->_target.find(type);
 
@@ -57,7 +57,7 @@ void	TargetGenerator::forgetTargetType(std::string const & type){
 	}
 }
 
-ATarget*	TargetGenerator::createTarget(std::string const & type){
+ATarget*	TargetGenerator::createTarget(const std::string& type){
 
 	ATarget* tmp = NULL;
 
